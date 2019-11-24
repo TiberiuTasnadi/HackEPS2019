@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>HackEPS2019 - Spaghetti Team</h1>
+<hr style="border: solid 0.5px;" />
+@using (Html.BeginForm("Calculate", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input style="margin-top:3%" type="file" name="FileUpload" />
+    <input style="margin-top:2%" type="submit" name="Submit" id="Submit" value="Upload" />
+}
+
+<hr />
+<p style="font-size:10px;">By: Tiberiu Tasnadi, Robert Tasnadi, Daniil Dygtiar</p>
