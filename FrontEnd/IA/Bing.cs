@@ -46,18 +46,9 @@ namespace FrontEnd
 
             IDataView trainingData = mlContext.Data.LoadFromTextFile<ImageData>(path: _trainTagsTsv, hasHeader: false);
 
-            // Train the model
-            Console.WriteLine("=============== Training classification model ===============");
+            // Train the model            
             // Create and train the model       
             ITransformer model = pipeline.Fit(trainingData);
-
-            // Generate predictions from the test data, to be evaluated
-            IDataView testData = mlContext.Data.LoadFromTextFile<ImageData>(path: _testTagsTsv, hasHeader: false);
-            IDataView predictions = model.Transform(testData);
-
-            // Create an IEnumerable for the predictions for displaying results
-            IEnumerable<ImagePrediction> imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, true);
-            DisplayResults(imagePredictionData);
 
             return model;
         }
@@ -65,7 +56,6 @@ namespace FrontEnd
         public static ResultViewModel ClassifySingleImage(MLContext mlContext, ITransformer model, string file)
         {
             List<string> returnList = new List<string>();
-            Console.WriteLine("=============== Making single image classification ===============");
             // load the fully qualified image file name into ImageData 
 
             var imageData = new ImageData()
@@ -84,14 +74,6 @@ namespace FrontEnd
             };
 
             return result;
-        }
-
-        private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
-        {
-            foreach (ImagePrediction prediction in imagePredictionData)
-            {
-                Console.WriteLine($"Image: {Path.GetFileName(prediction.ImagePath)} predicted as: {prediction.PredictedLabelValue} with score: {prediction.Score.Max()} ");
-            }
         }
 
         public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)

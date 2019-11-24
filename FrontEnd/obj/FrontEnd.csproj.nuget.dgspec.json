@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tibo\\Desktop\\OraCuloCore\\FrontEnd\\FrontEnd.csproj": {}
+    "C:\\Users\\Tibo\\Documents\\HackEPS2019\\FrontEnd\\FrontEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tibo\\Desktop\\OraCuloCore\\FrontEnd\\FrontEnd.csproj": {
+    "C:\\Users\\Tibo\\Documents\\HackEPS2019\\FrontEnd\\FrontEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tibo\\Desktop\\OraCuloCore\\FrontEnd\\FrontEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Tibo\\Documents\\HackEPS2019\\FrontEnd\\FrontEnd.csproj",
         "projectName": "FrontEnd",
-        "projectPath": "C:\\Users\\Tibo\\Desktop\\OraCuloCore\\FrontEnd\\FrontEnd.csproj",
+        "projectPath": "C:\\Users\\Tibo\\Documents\\HackEPS2019\\FrontEnd\\FrontEnd.csproj",
         "packagesPath": "C:\\Users\\Tibo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tibo\\Desktop\\OraCuloCore\\FrontEnd\\obj\\",
+        "outputPath": "C:\\Users\\Tibo\\Documents\\HackEPS2019\\FrontEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tibo\\AppData\\Roaming\\NuGet\\NuGet.Config",
